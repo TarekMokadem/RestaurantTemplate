@@ -37,16 +37,16 @@ const Header = () => {
               isScrolled ? "text-black" : "text-white"
             }`}
           >
-            Flavor<span className="text-red-600">Hub</span>
+            Le <span className="text-red-600">Familial</span>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            {["Home", "About", "Menu", "Info", "Order", "Gallery", "Contact"].map(
-              (item) => (
+            {["Accueil", "À Propos", "Menu", "Infos", "Commander", "Galerie", "Contact"].map(
+              (item, index) => (
                 <button
                   key={item}
-                  onClick={() => scrollToSection(item.toLowerCase())}
+                  onClick={() => scrollToSection(["home", "about", "menu", "info", "order", "gallery", "contact"][index])}
                   className={`transition-all duration-300 hover:text-red-600 font-medium ${
                     isScrolled ? "text-black" : "text-white"
                   }`}
@@ -76,11 +76,11 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden absolute top-full left-0 right-0 bg-white shadow-lg border-t">
             <div className="flex flex-col space-y-4 p-4">
-              {["Home", "About", "Menu", "Info", "Order", "Gallery", "Contact"].map(
-                (item) => (
+              {["Accueil", "À Propos", "Menu", "Infos", "Commander", "Galerie", "Contact"].map(
+                (item, index) => (
                   <button
                     key={item}
-                    onClick={() => scrollToSection(item.toLowerCase())}
+                    onClick={() => scrollToSection(["home", "about", "menu", "info", "order", "gallery", "contact"][index])}
                     className="text-left text-black hover:text-red-600 transition-colors duration-300 font-medium"
                   >
                     {item}

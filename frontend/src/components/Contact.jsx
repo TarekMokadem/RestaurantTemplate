@@ -11,7 +11,7 @@ const Contact = () => {
     name: "",
     email: "",
     phone: "",
-    subject: "General Inquiry",
+    subject: "Demande Générale",
     message: ""
   });
   const { toast } = useToast();
@@ -27,14 +27,14 @@ const Contact = () => {
     e.preventDefault();
     // Mock form submission
     toast({
-      title: "Message Sent!",
-      description: "Thank you for contacting us. We'll get back to you soon.",
+      title: "Message Envoyé !",
+      description: "Merci de nous avoir contactés. Nous vous répondrons bientôt.",
     });
     setFormData({
       name: "",
       email: "",
       phone: "",
-      subject: "General Inquiry",
+      subject: "Demande Générale",
       message: ""
     });
   };
@@ -45,25 +45,25 @@ const Contact = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
-            Get In Touch
+            Contactez-Nous
           </h2>
           <div className="w-20 h-1 bg-red-600 mx-auto mb-6"></div>
           <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-            Have questions about our menu, want to make a reservation, or need to plan a special event? 
-            We'd love to hear from you.
+            Vous avez des questions sur notre menu, souhaitez faire une réservation ou organiser un événement spécial ? 
+            Nous serions ravis de vous entendre.
           </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Form */}
           <div className="bg-white rounded-lg shadow-lg p-8">
-            <h3 className="text-2xl font-bold text-black mb-6">Send us a message</h3>
+            <h3 className="text-2xl font-bold text-black mb-6">Envoyez-nous un message</h3>
             
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-sm font-semibold text-gray-700 mb-2">
-                    Full Name
+                    Nom Complet
                   </label>
                   <Input
                     type="text"
@@ -72,12 +72,12 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     className="w-full"
-                    placeholder="Your full name"
+                    placeholder="Votre nom complet"
                   />
                 </div>
                 <div>
                   <label className="block text-sm font-semibold text-gray-700 mb-2">
-                    Email Address
+                    Adresse Email
                   </label>
                   <Input
                     type="email"
@@ -86,7 +86,7 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     className="w-full"
-                    placeholder="your@email.com"
+                    placeholder="votre@email.com"
                   />
                 </div>
               </div>
@@ -94,7 +94,7 @@ const Contact = () => {
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-sm font-semibold text-gray-700 mb-2">
-                    Phone Number
+                    Numéro de Téléphone
                   </label>
                   <Input
                     type="tel"
@@ -102,12 +102,12 @@ const Contact = () => {
                     value={formData.phone}
                     onChange={handleChange}
                     className="w-full"
-                    placeholder="(555) 123-4567"
+                    placeholder="06 12 34 56 78"
                   />
                 </div>
                 <div>
                   <label className="block text-sm font-semibold text-gray-700 mb-2">
-                    Subject
+                    Sujet
                   </label>
                   <select
                     name="subject"
@@ -115,11 +115,11 @@ const Contact = () => {
                     onChange={handleChange}
                     className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
                   >
-                    <option>General Inquiry</option>
-                    <option>Reservation</option>
-                    <option>Private Events</option>
-                    <option>Catering</option>
-                    <option>Feedback</option>
+                    <option>Demande Générale</option>
+                    <option>Réservation</option>
+                    <option>Événements Privés</option>
+                    <option>Traiteur</option>
+                    <option>Avis</option>
                   </select>
                 </div>
               </div>
@@ -135,7 +135,7 @@ const Contact = () => {
                   required
                   rows={5}
                   className="w-full"
-                  placeholder="Tell us how we can help you..."
+                  placeholder="Dites-nous comment nous pouvons vous aider..."
                 />
               </div>
 
@@ -144,7 +144,7 @@ const Contact = () => {
                 className="w-full bg-red-600 hover:bg-red-700 text-white py-3 font-semibold text-lg flex items-center justify-center space-x-2 transform hover:scale-105 transition-all duration-300"
               >
                 <Send className="w-5 h-5" />
-                <span>Send Message</span>
+                <span>Envoyer le Message</span>
               </Button>
             </form>
           </div>
@@ -152,7 +152,7 @@ const Contact = () => {
           {/* Contact Information */}
           <div className="space-y-8">
             <div className="bg-white rounded-lg shadow-lg p-8">
-              <h3 className="text-2xl font-bold text-black mb-6">Contact Information</h3>
+              <h3 className="text-2xl font-bold text-black mb-6">Informations de Contact</h3>
               
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
@@ -160,9 +160,9 @@ const Contact = () => {
                     <Phone className="w-6 h-6 text-red-600" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-lg text-black mb-1">Phone</h4>
+                    <h4 className="font-semibold text-lg text-black mb-1">Téléphone</h4>
                     <p className="text-gray-600">{restaurantData.info.location.phone}</p>
-                    <p className="text-gray-500 text-sm">Available daily 11 AM - 10 PM</p>
+                    <p className="text-gray-500 text-sm">Disponible tous les jours 11h - 22h</p>
                   </div>
                 </div>
 
@@ -173,7 +173,7 @@ const Contact = () => {
                   <div>
                     <h4 className="font-semibold text-lg text-black mb-1">Email</h4>
                     <p className="text-gray-600">{restaurantData.info.location.email}</p>
-                    <p className="text-gray-500 text-sm">We'll respond within 24 hours</p>
+                    <p className="text-gray-500 text-sm">Nous répondons sous 24h</p>
                   </div>
                 </div>
 
@@ -182,9 +182,9 @@ const Contact = () => {
                     <MapPin className="w-6 h-6 text-red-600" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-lg text-black mb-1">Address</h4>
+                    <h4 className="font-semibold text-lg text-black mb-1">Adresse</h4>
                     <p className="text-gray-600">{restaurantData.info.location.address}</p>
-                    <p className="text-gray-500 text-sm">Easy parking available</p>
+                    <p className="text-gray-500 text-sm">Parking facile disponible</p>
                   </div>
                 </div>
               </div>
@@ -192,25 +192,25 @@ const Contact = () => {
 
             {/* Quick Actions */}
             <div className="bg-red-600 rounded-lg shadow-lg p-8 text-white">
-              <h3 className="text-2xl font-bold mb-4">Quick Actions</h3>
+              <h3 className="text-2xl font-bold mb-4">Actions Rapides</h3>
               <div className="space-y-4">
                 <Button
                   variant="outline"
                   className="w-full border-white text-white hover:bg-white hover:text-red-600 py-3 font-semibold"
                 >
-                  Make a Reservation
+                  Faire une Réservation
                 </Button>
                 <Button
                   variant="outline"
                   className="w-full border-white text-white hover:bg-white hover:text-red-600 py-3 font-semibold"
                 >
-                  Order for Pickup
+                  Commander à Emporter
                 </Button>
                 <Button
                   variant="outline"
                   className="w-full border-white text-white hover:bg-white hover:text-red-600 py-3 font-semibold"
                 >
-                  Plan Private Event
+                  Organiser un Événement Privé
                 </Button>
               </div>
             </div>

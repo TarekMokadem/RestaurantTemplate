@@ -9,12 +9,12 @@ const Ordering = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
-            Order Online
+            Commander en Ligne
           </h2>
           <div className="w-20 h-1 bg-red-600 mx-auto mb-6"></div>
           <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-            Enjoy our delicious food from the comfort of your home. 
-            Fast delivery and easy ordering through our trusted partners.
+            Savourez nos spécialités 100% Halal depuis chez vous à Roubaix et alentours. 
+            Boisson 33cl offerte avec chaque plat (sauf UberEats).
           </p>
         </div>
 
@@ -24,9 +24,9 @@ const Ordering = () => {
             <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
               <Clock className="w-8 h-8 text-red-600" />
             </div>
-            <h3 className="text-xl font-bold text-black mb-2">Fast Delivery</h3>
+            <h3 className="text-xl font-bold text-black mb-2">Livraison Rapide</h3>
             <p className="text-gray-600">
-              Average delivery time of 25-35 minutes to your doorstep
+              Temps de livraison moyen de 25-35 minutes à votre porte
             </p>
           </div>
 
@@ -34,9 +34,9 @@ const Ordering = () => {
             <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
               <Star className="w-8 h-8 text-red-600" />
             </div>
-            <h3 className="text-xl font-bold text-black mb-2">Quality Guaranteed</h3>
+            <h3 className="text-xl font-bold text-black mb-2">Qualité Garantie</h3>
             <p className="text-gray-600">
-              Same restaurant quality delivered fresh to your location
+              Cuisine 100% Halal avec boisson 33cl offerte
             </p>
           </div>
 
@@ -44,9 +44,9 @@ const Ordering = () => {
             <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
               <Smartphone className="w-8 h-8 text-red-600" />
             </div>
-            <h3 className="text-xl font-bold text-black mb-2">Easy Ordering</h3>
+            <h3 className="text-xl font-bold text-black mb-2">Commande Facile</h3>
             <p className="text-gray-600">
-              Simple and secure ordering process with multiple payment options
+              Processus de commande simple et sécurisé avec plusieurs options de paiement
             </p>
           </div>
         </div>
@@ -54,73 +54,63 @@ const Ordering = () => {
         {/* Delivery Partners */}
         <div className="bg-white rounded-lg shadow-lg p-8">
           <h3 className="text-2xl font-bold text-center text-black mb-8">
-            Order through our delivery partners
+            Commandez directement ou via nos partenaires
           </h3>
           
           <div className="grid md:grid-cols-2 gap-6">
-            {/* UberEats */}
-            <div className="group bg-gradient-to-r from-black to-gray-800 rounded-lg p-6 text-white hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+            {/* Livraison Directe */}
+            <div className="group bg-gradient-to-r from-red-600 to-red-700 rounded-lg p-6 text-white hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
               <div className="flex items-center justify-between mb-4">
                 <div>
-                  <h4 className="text-xl font-bold">UberEats</h4>
-                  <p className="text-gray-300">Free delivery on orders over $25</p>
-                </div>
-                <Truck className="w-8 h-8 text-green-400" />
-              </div>
-              
-              <div className="space-y-2 mb-6">
-                <div className="flex justify-between">
-                  <span className="text-gray-300">Delivery Fee:</span>
-                  <span className="text-white">$2.99</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-gray-300">Delivery Time:</span>
-                  <span className="text-white">25-35 min</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-gray-300">Rating:</span>
-                  <div className="flex items-center space-x-1">
-                    <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                    <span className="text-white">4.8</span>
-                  </div>
-                </div>
-              </div>
-
-              <Button className="w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-3 transition-all duration-300 group-hover:bg-green-400">
-                Order on UberEats
-              </Button>
-            </div>
-
-            {/* Deliveroo */}
-            <div className="group bg-gradient-to-r from-cyan-500 to-cyan-600 rounded-lg p-6 text-white hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-              <div className="flex items-center justify-between mb-4">
-                <div>
-                  <h4 className="text-xl font-bold">Deliveroo</h4>
-                  <p className="text-cyan-100">Premium delivery service</p>
+                  <h4 className="text-xl font-bold">Le Familial Direct</h4>
+                  <p className="text-red-100">Commandez directement au restaurant</p>
                 </div>
                 <Truck className="w-8 h-8 text-white" />
               </div>
               
               <div className="space-y-2 mb-6">
                 <div className="flex justify-between">
-                  <span className="text-cyan-100">Delivery Fee:</span>
-                  <span className="text-white">$3.49</span>
+                  <span className="text-red-100">Téléphone :</span>
+                  <span className="text-white">03 66 59 90 97</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-cyan-100">Delivery Time:</span>
-                  <span className="text-white">20-30 min</span>
+                  <span className="text-red-100">Zone :</span>
+                  <span className="text-white">Roubaix & alentours</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-cyan-100">Rating:</span>
-                  <div className="flex items-center space-x-1">
-                    <Star className="w-4 h-4 text-yellow-300 fill-current" />
-                    <span className="text-white">4.9</span>
-                  </div>
+                  <span className="text-red-100">Boisson :</span>
+                  <span className="text-white">33cl offerte</span>
                 </div>
               </div>
 
-              <Button className="w-full bg-white text-cyan-600 hover:bg-cyan-50 font-semibold py-3 transition-all duration-300 group-hover:bg-gray-100">
-                Order on Deliveroo
+              <Button className="w-full bg-white text-red-600 hover:bg-red-50 font-semibold py-3 transition-all duration-300 group-hover:bg-gray-100">
+                Appeler le Restaurant
+              </Button>
+            </div>
+
+            {/* UberEats */}
+            <div className="group bg-gradient-to-r from-black to-gray-800 rounded-lg p-6 text-white hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+              <div className="flex items-center justify-between mb-4">
+                <div>
+                  <h4 className="text-xl font-bold">UberEats</h4>
+                  <p className="text-gray-300">Livraison via Uber Eats</p>
+                </div>
+                <Truck className="w-8 h-8 text-green-400" />
+              </div>
+              
+              <div className="space-y-2 mb-6">
+                <div className="flex justify-between">
+                  <span className="text-gray-300">Frais de livraison :</span>
+                  <span className="text-white">Variable</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-gray-300">Temps de livraison :</span>
+                  <span className="text-white">25-40 min</span>
+                </div>
+              </div>
+
+              <Button className="w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-3 transition-all duration-300 group-hover:bg-green-400">
+                Commander sur UberEats
               </Button>
             </div>
           </div>
@@ -128,12 +118,12 @@ const Ordering = () => {
           {/* Additional Info */}
           <div className="mt-8 text-center">
             <p className="text-gray-600 mb-4">
-              Minimum order value applies. Delivery fees may vary based on location and time.
+              <strong>Minimum de commande :</strong> 20€ sur Roubaix, 25€ autres villes. Les frais de livraison peuvent varier.
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-500">
-              <span>• Contactless delivery available</span>
-              <span>• Track your order in real-time</span>
-              <span>• Multiple payment options</span>
+              <span>• 100% Halal certifié</span>
+              <span>• Boisson 33cl offerte avec chaque plat (sauf UberEats)</span>
+              <span>• Sur place, à emporter ou livraison</span>
             </div>
           </div>
         </div>

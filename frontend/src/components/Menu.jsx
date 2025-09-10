@@ -1,11 +1,21 @@
 import React, { useState } from "react";
 import { restaurantData } from "../data/mockData";
+import MenuPopup from "./MenuPopup";
 
 const Menu = () => {
   const { menuCategories } = restaurantData;
   const [activeCategory, setActiveCategory] = useState(menuCategories[0]?.id);
+  const [isMenuPopupOpen, setIsMenuPopupOpen] = useState(false);
 
   const activeItems = menuCategories.find(cat => cat.id === activeCategory)?.items || [];
+
+  const openMenuPopup = () => {
+    setIsMenuPopupOpen(true);
+  };
+
+  const closeMenuPopup = () => {
+    setIsMenuPopupOpen(false);
+  };
 
   return (
     <section id="menu" className="py-20 bg-white">
@@ -13,12 +23,12 @@ const Menu = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
-            Our Menu
+            Notre Menu
           </h2>
           <div className="w-20 h-1 bg-red-600 mx-auto mb-6"></div>
           <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-            Discover our carefully crafted dishes made with the finest ingredients 
-            and prepared by our expert chefs.
+            Découvrez nos plats soigneusement préparés avec les meilleurs ingrédients 
+            et élaborés par nos chefs experts.
           </p>
         </div>
 
@@ -66,14 +76,6 @@ const Menu = () => {
                   <p className="text-gray-600 leading-relaxed">
                     {item.description}
                   </p>
-                  <div className="mt-4 flex items-center space-x-2">
-                    <div className="flex space-x-1">
-                      {[...Array(5)].map((_, i) => (
-                        <div key={i} className="w-4 h-4 bg-yellow-400 rounded-full"></div>
-                      ))}
-                    </div>
-                    <span className="text-sm text-gray-500">(4.8)</span>
-                  </div>
                 </div>
               </div>
             </div>
@@ -82,11 +84,17 @@ const Menu = () => {
 
         {/* View Full Menu CTA */}
         <div className="text-center mt-12">
-          <button className="bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-full font-semibold text-lg transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
-            View Full Menu
+          <button 
+            onClick={openMenuPopup}
+            className="bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-full font-semibold text-lg transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
+          >
+            Voir le Menu Complet
           </button>
         </div>
       </div>
+
+      {/* Menu Popup */}
+      <MenuPopup isOpen={isMenuPopupOpen} onClose={closeMenuPopup} />
     </section>
   );
 };

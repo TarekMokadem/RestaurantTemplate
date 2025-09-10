@@ -20,11 +20,11 @@ const Footer = () => {
           {/* Brand Section */}
           <div className="md:col-span-2">
             <div className="text-3xl font-bold mb-4">
-              Flavor<span className="text-red-600">Hub</span>
+              Le <span className="text-red-600">Familial</span>
             </div>
             <p className="text-gray-400 mb-6 leading-relaxed">
-              Experience culinary excellence at FlavorHub, where every dish tells a story 
-              and every bite creates a memory. Join us for an unforgettable dining experience.
+              Restaurant familial à Roubaix proposant une cuisine généreuse 100% Halal. 
+              Pâtes, escalopes, viandes avec boisson offerte. Sur place, à emporter ou en livraison.
             </p>
             
             {/* Social Media */}
@@ -58,12 +58,12 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-xl font-bold mb-6">Quick Links</h3>
+            <h3 className="text-xl font-bold mb-6">Liens Rapides</h3>
             <ul className="space-y-3">
-              {["Home", "About", "Menu", "Gallery", "Contact"].map((item) => (
+              {["Accueil", "À Propos", "Menu", "Galerie", "Contact"].map((item, index) => (
                 <li key={item}>
                   <button
-                    onClick={() => scrollToSection(item.toLowerCase())}
+                    onClick={() => scrollToSection(["home", "about", "menu", "gallery", "contact"][index])}
                     className="text-gray-400 hover:text-white transition-colors duration-300"
                   >
                     {item}
@@ -72,12 +72,12 @@ const Footer = () => {
               ))}
               <li>
                 <a href="#" className="text-gray-400 hover:text-white transition-colors duration-300">
-                  Reservations
+                  Réservations
                 </a>
               </li>
               <li>
                 <a href="#" className="text-gray-400 hover:text-white transition-colors duration-300">
-                  Private Events
+                  Événements Privés
                 </a>
               </li>
             </ul>
@@ -109,11 +109,11 @@ const Footer = () => {
 
             {/* Newsletter */}
             <div className="mt-6">
-              <h4 className="text-lg font-semibold mb-3">Stay Updated</h4>
+              <h4 className="text-lg font-semibold mb-3">Restez Informé</h4>
               <div className="flex">
                 <input
                   type="email"
-                  placeholder="Your email"
+                  placeholder="Votre email"
                   className="flex-1 px-3 py-2 bg-gray-800 border border-gray-700 rounded-l-md focus:outline-none focus:border-red-600 text-white"
                 />
                 <button className="bg-red-600 hover:bg-red-700 px-4 py-2 rounded-r-md transition-colors duration-300">
@@ -130,15 +130,15 @@ const Footer = () => {
         <div className="container mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-gray-400 text-sm text-center md:text-left">
-              © {currentYear} FlavorHub. All rights reserved. | 
-              <a href="#" className="hover:text-white ml-1">Privacy Policy</a> | 
-              <a href="#" className="hover:text-white ml-1">Terms of Service</a>
+              © {currentYear} Le Familial - Restaurant à Roubaix. Tous droits réservés. | 
+              <a href="#" className="hover:text-white ml-1">Mentions Légales</a> | 
+              <a href="#" className="hover:text-white ml-1">Contact</a>
             </div>
             
             <div className="flex items-center space-x-2 text-gray-400 text-sm">
-              <span>Made with</span>
+              <span>Fait avec</span>
               <Heart className="w-4 h-4 text-red-600 fill-current" />
-              <span>for food lovers</span>
+              <span>pour les amoureux de la cuisine</span>
             </div>
           </div>
         </div>

@@ -34,12 +34,12 @@ const Gallery = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
-            Photo Gallery
+            Galerie Photo
           </h2>
           <div className="w-20 h-1 bg-red-600 mx-auto mb-6"></div>
           <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-            Take a visual journey through our restaurant, from our elegant dining spaces 
-            to our carefully crafted dishes.
+            Partez pour un voyage visuel à travers notre restaurant, de nos espaces de restauration élégants 
+            à nos plats soigneusement préparés.
           </p>
         </div>
 
@@ -112,14 +112,14 @@ const Gallery = () => {
         {/* Call to Action */}
         <div className="text-center mt-12">
           <p className="text-gray-600 mb-6">
-            Want to see more? Follow us on social media for daily updates and behind-the-scenes content.
+            Vous voulez en voir plus ? Suivez-nous sur les réseaux sociaux pour des mises à jour quotidiennes et du contenu en coulisses.
           </p>
           <div className="flex justify-center space-x-4">
             <button className="bg-black hover:bg-gray-800 text-white px-6 py-3 rounded-full font-semibold transition-colors duration-300">
-              Follow on Instagram
+              Suivre sur Instagram
             </button>
             <button className="border border-gray-300 hover:border-red-600 text-gray-700 hover:text-red-600 px-6 py-3 rounded-full font-semibold transition-all duration-300">
-              Visit Facebook
+              Visiter Facebook
             </button>
           </div>
         </div>
