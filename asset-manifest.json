@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/RestaurantTemplate/static/css/main.aee07cd5.css",
-    "main.js": "/RestaurantTemplate/static/js/main.60fed7b0.js",
+    "main.js": "/RestaurantTemplate/static/js/main.cf5c242b.js",
     "static/media/room.png": "/RestaurantTemplate/static/media/room.e58c0c44c342dd435272.png",
     "static/media/menu (2).png": "/RestaurantTemplate/static/media/menu (2).cd8b1c80b211f50484c5.png",
     "static/media/hero1.png": "/RestaurantTemplate/static/media/hero1.36915c2afc3dd4f05bef.png",
@@ -14,10 +14,10 @@
     "static/media/halal-logo.png": "/RestaurantTemplate/static/media/halal-logo.0b3c1b4f442e6f085e44.png",
     "index.html": "/RestaurantTemplate/index.html",
     "main.aee07cd5.css.map": "/RestaurantTemplate/static/css/main.aee07cd5.css.map",
-    "main.60fed7b0.js.map": "/RestaurantTemplate/static/js/main.60fed7b0.js.map"
+    "main.cf5c242b.js.map": "/RestaurantTemplate/static/js/main.cf5c242b.js.map"
   },
   "entrypoints": [
     "static/css/main.aee07cd5.css",
-    "static/js/main.60fed7b0.js"
+    "static/js/main.cf5c242b.js"
   ]
 }
