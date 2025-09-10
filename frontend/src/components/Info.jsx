@@ -6,14 +6,14 @@ const Info = () => {
   const { info } = restaurantData;
 
   return (
-    <section id="info" className="py-20 bg-black text-white">
+    <section id="info" className="py-12 md:py-20 bg-black text-white">
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-2 gap-12">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12">
           {/* Hours */}
           <div className="space-y-6">
             <div>
-              <h3 className="text-3xl font-bold mb-4 flex items-center">
-                <Clock className="w-8 h-8 text-red-500 mr-3" />
+              <h3 className="text-2xl md:text-3xl font-bold mb-4 flex items-center">
+                <Clock className="w-6 h-6 md:w-8 md:h-8 text-red-500 mr-3" />
                 Horaires d'Ouverture
               </h3>
               <div className="w-16 h-1 bg-red-600 mb-6"></div>

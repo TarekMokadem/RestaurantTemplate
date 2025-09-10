@@ -54,16 +54,17 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
-          {/* Contact Form */}
-          <div className="bg-white rounded-lg shadow-lg p-8">
-            <h3 className="text-2xl font-bold text-black mb-6">Envoyez-nous un message</h3>
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
+          {/* Contact Form - Mobile Optimized */}
+          <div className="bg-white rounded-xl shadow-lg p-6 lg:p-8">
+            <h3 className="text-xl lg:text-2xl font-bold text-black mb-6">Envoyez-nous un message</h3>
             
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid md:grid-cols-2 gap-4">
+            <form onSubmit={handleSubmit} className="space-y-5">
+              {/* Mobile: Single column, Desktop: Two columns */}
+              <div className="space-y-5 lg:grid lg:grid-cols-2 lg:gap-4 lg:space-y-0">
                 <div>
                   <label className="block text-sm font-semibold text-gray-700 mb-2">
-                    Nom Complet
+                    Nom Complet *
                   </label>
                   <Input
                     type="text"
@@ -71,13 +72,13 @@ const Contact = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full"
+                    className="w-full h-12 text-base"
                     placeholder="Votre nom complet"
                   />
                 </div>
                 <div>
                   <label className="block text-sm font-semibold text-gray-700 mb-2">
-                    Adresse Email
+                    Adresse Email *
                   </label>
                   <Input
                     type="email"
@@ -85,13 +86,13 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full"
+                    className="w-full h-12 text-base"
                     placeholder="votre@email.com"
                   />
                 </div>
               </div>
 
-              <div className="grid md:grid-cols-2 gap-4">
+              <div className="space-y-5 lg:grid lg:grid-cols-2 lg:gap-4 lg:space-y-0">
                 <div>
                   <label className="block text-sm font-semibold text-gray-700 mb-2">
                     Numéro de Téléphone
@@ -101,7 +102,7 @@ const Contact = () => {
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="w-full"
+                    className="w-full h-12 text-base"
                     placeholder="06 12 34 56 78"
                   />
                 </div>
@@ -113,7 +114,8 @@ const Contact = () => {
                     name="subject"
                     value={formData.subject}
                     onChange={handleChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                    required
+                    className="w-full h-12 px-4 text-base border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent bg-white"
                   >
                     <option>Demande Générale</option>
                     <option>Réservation</option>
@@ -134,14 +136,14 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   rows={5}
-                  className="w-full"
-                  placeholder="Dites-nous comment nous pouvons vous aider..."
+                  className="w-full text-base px-4 py-3"
+                  placeholder="Décrivez votre demande en détail..."
                 />
               </div>
 
               <Button
                 type="submit"
-                className="w-full bg-red-600 hover:bg-red-700 text-white py-3 font-semibold text-lg flex items-center justify-center space-x-2 transform hover:scale-105 transition-all duration-300"
+                className="w-full bg-red-600 hover:bg-red-700 text-white py-4 font-semibold text-lg flex items-center justify-center space-x-2 transform hover:scale-105 transition-all duration-300 rounded-lg shadow-lg hover:shadow-xl"
               >
                 <Send className="w-5 h-5" />
                 <span>Envoyer le Message</span>
@@ -149,9 +151,9 @@ const Contact = () => {
             </form>
           </div>
 
-          {/* Contact Information */}
-          <div className="space-y-8">
-            <div className="bg-white rounded-lg shadow-lg p-8">
+          {/* Contact Information - Mobile Optimized */}
+          <div className="space-y-6 lg:space-y-8">
+            <div className="bg-white rounded-xl shadow-lg p-6 lg:p-8">
               <h3 className="text-2xl font-bold text-black mb-6">Informations de Contact</h3>
               
               <div className="space-y-6">
@@ -190,27 +192,28 @@ const Contact = () => {
               </div>
             </div>
 
-            {/* Quick Actions */}
-            <div className="bg-red-600 rounded-lg shadow-lg p-8 text-white">
-              <h3 className="text-2xl font-bold mb-4">Actions Rapides</h3>
+            {/* Quick Actions - Mobile Optimized */}
+            <div className="bg-red-600 rounded-xl shadow-lg p-6 lg:p-8 text-white">
+              <h3 className="text-xl lg:text-2xl font-bold mb-6">Actions Rapides</h3>
               <div className="space-y-4">
+                <a 
+                  href="tel:0366599097"
+                  className="w-full border-2 border-white text-white hover:bg-white hover:text-red-600 py-4 font-semibold rounded-lg transition-all duration-300 flex items-center justify-center space-x-2"
+                >
+                  <span>📞</span>
+                  <span>Réserver par Téléphone</span>
+                </a>
                 <Button
                   variant="outline"
-                  className="w-full border-white text-white hover:bg-white hover:text-red-600 py-3 font-semibold"
+                  className="w-full border-2 border-white text-white hover:bg-white hover:text-red-600 py-4 font-semibold rounded-lg transition-all duration-300"
                 >
-                  Faire une Réservation
+                  🛒 Commander à Emporter
                 </Button>
                 <Button
                   variant="outline"
-                  className="w-full border-white text-white hover:bg-white hover:text-red-600 py-3 font-semibold"
+                  className="w-full border-2 border-white text-white hover:bg-white hover:text-red-600 py-4 font-semibold rounded-lg transition-all duration-300"
                 >
-                  Commander à Emporter
-                </Button>
-                <Button
-                  variant="outline"
-                  className="w-full border-white text-white hover:bg-white hover:text-red-600 py-3 font-semibold"
-                >
-                  Organiser un Événement Privé
+                  🎉 Organiser un Événement
                 </Button>
               </div>
             </div>

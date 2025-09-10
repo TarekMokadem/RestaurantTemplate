@@ -27,6 +27,46 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
         <title>Le Familial - Restaurant Halal à Roubaix | Pâtes, Escalopes, Viandes</title>
+        
+        <!-- Schema.org Structured Data for Restaurant -->
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Restaurant",
+          "name": "Le Familial",
+          "description": "Restaurant 100% Halal à Roubaix spécialisé dans les pâtes, escalopes et viandes. Boisson offerte avec chaque plat.",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "164 rue de Lannoy",
+            "addressLocality": "Roubaix",
+            "postalCode": "59100",
+            "addressCountry": "FR"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 50.6942,
+            "longitude": 3.1746
+          },
+          "telephone": "03 66 59 90 97",
+          "email": "contact@lefamilial-roubaix.fr",
+          "url": "https://lefamilial-roubaix.fr",
+          "priceRange": "€€",
+          "cuisineType": ["Halal", "Française", "Pâtes"],
+          "servesCuisine": "Halal",
+          "hasMenu": true,
+          "acceptsReservations": true,
+          "openingHours": [
+            "Tu-Su 12:00-14:30",
+            "Tu-Su 18:30-22:30"
+          ],
+          "paymentAccepted": ["Cash", "Credit Card"],
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "ratingCount": "127"
+          }
+        }
+        </script>
     </head>
     <body>
         <noscript>You need to enable JavaScript to run this app.</noscript>

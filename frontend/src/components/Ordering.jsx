@@ -4,11 +4,11 @@ import { Button } from "./ui/button";
 
 const Ordering = () => {
   return (
-    <section id="order" className="py-20 bg-gradient-to-br from-red-50 to-red-100">
+    <section id="order" className="py-12 md:py-20 bg-gradient-to-br from-red-50 to-red-100">
       <div className="container mx-auto px-4">
         {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
+        <div className="text-center mb-12 md:mb-16">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-black mb-4">
             Commander en Ligne
           </h2>
           <div className="w-20 h-1 bg-red-600 mx-auto mb-6"></div>
@@ -19,7 +19,7 @@ const Ordering = () => {
         </div>
 
         {/* Features */}
-        <div className="grid md:grid-cols-3 gap-8 mb-12">
+        <div className="grid md:grid-cols-3 gap-6 md:gap-8 mb-8 md:mb-12">
           <div className="text-center p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
             <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
               <Clock className="w-8 h-8 text-red-600" />

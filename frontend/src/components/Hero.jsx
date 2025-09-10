@@ -34,6 +34,8 @@ const Hero = () => {
             src={hero1}
             alt="Restaurant Le Familial à Roubaix - Cuisine Halal"
             className="w-full h-full object-cover"
+            loading="eager"
+            decoding="sync"
           />
           <div className="absolute inset-0 bg-black/60"></div>
         </div>
@@ -94,6 +96,8 @@ const Hero = () => {
               src={hero1}
               alt="Spécialités de pâtes du restaurant Le Familial à Roubaix"
               className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+              loading="eager"
+              decoding="sync"
             />
             <div className="absolute inset-0 bg-black/50 group-hover:bg-black/40 transition-all duration-500"></div>
           </div>

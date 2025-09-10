@@ -79,6 +79,8 @@ const About = () => {
                 src={devanture}
                 alt="Devanture du restaurant Le Familial à Roubaix"
                 className="w-full md:w-auto h-[60vh] md:h-[80vh] object-contain transform hover:scale-105 transition-transform duration-700"
+                loading="lazy"
+                decoding="async"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
             </div>
